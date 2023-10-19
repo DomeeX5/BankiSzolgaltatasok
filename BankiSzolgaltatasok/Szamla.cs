@@ -19,7 +19,7 @@ namespace BankiSzolgaltatasok
 
 		public void Befizet(int osszeg)
 		{
-			osszeg += aktualisEgyenleg;
+			aktualisEgyenleg = aktualisEgyenleg + osszeg;
 		}
 
 		public abstract bool Kivesz(int osszeg);
