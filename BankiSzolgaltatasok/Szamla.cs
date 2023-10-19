@@ -12,7 +12,7 @@ namespace BankiSzolgaltatasok
 
 		public Szamla(Tulajdonos tulajdonos) : base(tulajdonos)
 		{
-			aktualisEgyenleg = 0;
+			this.aktualisEgyenleg = 0;
 		}
 
 		public int AktualisEgyenleg { get => aktualisEgyenleg; }
@@ -23,5 +23,10 @@ namespace BankiSzolgaltatasok
 		}
 
 		public abstract bool Kivesz(int osszeg);
+
+		public Kartya UjKartya(string kartyaSzam)
+		{
+			return new Kartya(this.Tulajdonos,this,kartyaSzam);
+		}
 	}
 }

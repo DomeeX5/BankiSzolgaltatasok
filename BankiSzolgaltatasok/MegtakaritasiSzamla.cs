@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankiSzolgaltatasok
 {
-	internal class MegtakaritasiSzamla : Szamla
+	public class MegtakaritasiSzamla : Szamla
 	{
 		public static double alapKamat = 1.1;
 		private double kamat;
