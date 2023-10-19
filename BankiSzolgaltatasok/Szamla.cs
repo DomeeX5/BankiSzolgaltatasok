@@ -12,7 +12,7 @@ namespace BankiSzolgaltatasok
 
 		public Szamla(Tulajdonos tulajdonos) : base(tulajdonos)
 		{
-			
+			aktualisEgyenleg = 0;
 		}
 
 		public int AktualisEgyenleg { get => aktualisEgyenleg; }
