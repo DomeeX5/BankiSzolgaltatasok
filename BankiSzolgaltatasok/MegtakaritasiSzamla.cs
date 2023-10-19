@@ -20,15 +20,13 @@ namespace BankiSzolgaltatasok
 
 		public override bool Kivesz(int osszeg)
 		{
-			if (aktualisEgyenleg > 0 )
+			if (aktualisEgyenleg - osszeg >= 0)
 			{
-				aktualisEgyenleg = aktualisEgyenleg - osszeg;
+				aktualisEgyenleg -= osszeg;
 				return true;
-			}
-			else
-			{
-				return false;
-			}
+			} 
+			return false;
+			
 		}
 
 		public void KamatJovairas()

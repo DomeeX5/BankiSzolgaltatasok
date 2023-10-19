@@ -21,16 +21,11 @@ namespace BankiSzolgaltatasok
 
 		public bool Vasarlas(int osszeg)
 		{
-			long aktEgyenleg = szamla.AktualisEgyenleg;
-			if (osszeg > szamla.AktualisEgyenleg)
+			if (szamla.Kivesz(osszeg))
 			{
-				return false;
-			}
-			else
-			{
-				aktEgyenleg = szamla.AktualisEgyenleg - osszeg;
 				return true;
 			}
+			return false;
 		}
 	}
 }
